@@ -13,7 +13,7 @@
 <header class="top">
 <div class="wrap top-inner">
 <a class="brand" href="../index.html">Suitably Coded</a>
-<nav aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#how">How a job runs</a><a href="https://github.com/fathomit/fathomit.github.io">Source code</a><a class="btn btn-primary" href="mailto:fathomit.freelance@gmail.com">Email Suitably Coded</a></nav>
+<nav aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#how">How a job runs</a><a href="https://github.com/suitablycoded/suitablycoded.github.io">Source code</a><a class="btn btn-primary" href="mailto:fathomit.freelance@gmail.com">Email Suitably Coded</a></nav>
 </div>
 </header>
 <main id="main">
@@ -57,12 +57,12 @@
 <pre><code>pip install -r requirements.txt &amp;&amp; pip install -e .</code></pre>
 <pre><code>python demo/run_demo.py</code></pre>
 <pre><code>contact-cleaner clean contacts.xlsx --out cleaned</code></pre>
-<p>Full instructions are in the project&#8217;s <a href="https://github.com/fathomit/fathomit.github.io/blob/main/contact-cleaner/README.md">README</a>.</p>
+<p>Full instructions are in the project&#8217;s <a href="https://github.com/suitablycoded/suitablycoded.github.io/blob/main/contact-cleaner/README.md">README</a>.</p>
 <h2>Tools used</h2>
 <ul class="tools"><li>Python 3.11</li><li>openpyxl</li><li>phonenumbers</li><li>PyYAML</li><li>pytest</li><li>Playwright (screenshots only)</li></ul>
 <h2>Honest limits</h2>
 <ul class="limits"><li>UK-first. Name rules suit British and Irish names; other naming customs (family name first, single names, patronymics) are not split well and should be checked.</li><li>Postcodes are checked for format only, and only for UK rows.</li><li>Phone numbers are checked against number plans, not that they are in service. An extension is dropped, not moved to another field.</li><li>Unreadable dates and invalid postcodes stay in the clean file as they were (and are flagged), so read review.csv before importing.</li><li>A column headed just &quot;Name&quot; is read as a person&#x27;s full name; the tool prints a note and the report repeats it. If it holds company names, map it with <code>columns: {company: Name}</code>. If two columns look like email, the first is used and the other goes to passthrough.csv.</li><li>Likely duplicates need the same name and company. Nicknames (Bob and Robert) and typos in names are not matched.</li><li>Exact duplicates are matched on email only. Two rows with the same phone number and different emails are not merged.</li><li>Only one date column (Date added) is cleaned. Other date columns go to passthrough unchanged.</li><li>It does not upload anything to a CRM, check emails can receive mail, or look up missing data.</li><li>Files are read into memory. A hundred thousand rows is fine; millions are not what it is for.</li></ul>
-<p><a class="btn" href="https://github.com/fathomit/fathomit.github.io/tree/main/contact-cleaner">View the source for this project</a></p>
+<p><a class="btn" href="https://github.com/suitablycoded/suitablycoded.github.io/tree/main/contact-cleaner">View the source for this project</a></p>
 <p class="note">All data in this sample is fictional.</p>
 </article>
 </main>

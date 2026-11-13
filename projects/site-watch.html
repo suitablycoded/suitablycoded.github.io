@@ -13,7 +13,7 @@
 <header class="top">
 <div class="wrap top-inner">
 <a class="brand" href="../index.html">Suitably Coded</a>
-<nav aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#how">How a job runs</a><a href="https://github.com/fathomit/fathomit.github.io">Source code</a><a class="btn btn-primary" href="mailto:fathomit.freelance@gmail.com">Email Suitably Coded</a></nav>
+<nav aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#how">How a job runs</a><a href="https://github.com/suitablycoded/suitablycoded.github.io">Source code</a><a class="btn btn-primary" href="mailto:fathomit.freelance@gmail.com">Email Suitably Coded</a></nav>
 </div>
 </header>
 <main id="main">
@@ -51,12 +51,12 @@
 <pre><code>python -m venv .venv &amp;&amp; .venv\Scripts\activate &amp;&amp; pip install -e &quot;.[test]&quot; &amp;&amp; python -m playwright install chromium</code></pre>
 <pre><code>python demo/run_demo.py</code></pre>
 <pre><code>site-watch -c watches.json check --dry-run</code></pre>
-<p>Full instructions are in the project&#8217;s <a href="https://github.com/fathomit/fathomit.github.io/blob/main/site-watch/README.md">README</a>.</p>
+<p>Full instructions are in the project&#8217;s <a href="https://github.com/suitablycoded/suitablycoded.github.io/blob/main/site-watch/README.md">README</a>.</p>
 <h2>Tools used</h2>
 <ul class="tools"><li>Python</li><li>Playwright (Chromium)</li><li>SQLite</li><li>pytest</li></ul>
 <h2>Honest limits</h2>
 <ul class="limits"><li>It compares visible text, not layout, colours or images. A change that only affects how a page looks is not detected.</li><li>It does not log in to sites or fill in forms.</li><li>It does not get past CAPTCHAs or bot blocking.</li><li>Failed checks are logged, recorded and shown in the report, but no alert is sent for them.</li><li>Content that a script adds without any network request is only read if you set <code>wait_for</code> or <code>settle_seconds</code>.</li><li>Screenshots stop at 20,000 pixels from the top of the page. Chromium cannot capture very tall pages in one image (in testing, 300,000 pixels worked and 700,000 did not), so site-watch caps the height. The text of the whole page is still compared, so a change further down is still detected; it is just not in the screenshot.</li><li>A page that keeps making network requests never goes quiet, so each check of it waits the full 10 seconds before reading.</li><li>A removed watch keeps its history in the report. Adding it back, or changing the URL of an existing name, compares against the old snapshot.</li><li>Watch names are cut to 60 characters for folder names, so two names that only differ after that count as the same.</li><li>The evidence path in an alert is relative to the data folder on the machine that runs site-watch. Email alerts carry the files as attachments; webhook alerts do not.</li><li>Times are local time with no time zone. Email over implicit TLS (port 465) is not supported; use STARTTLS.</li><li>One process runs the checks one page at a time. It is meant for tens of pages, not thousands.</li><li>Evidence and screenshots are kept until you delete them.</li></ul>
-<p><a class="btn" href="https://github.com/fathomit/fathomit.github.io/tree/main/site-watch">View the source for this project</a></p>
+<p><a class="btn" href="https://github.com/suitablycoded/suitablycoded.github.io/tree/main/site-watch">View the source for this project</a></p>
 <p class="note">All data in this sample is fictional.</p>
 </article>
 </main>
