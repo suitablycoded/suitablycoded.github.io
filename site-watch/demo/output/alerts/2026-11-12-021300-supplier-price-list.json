@@ -1,0 +1,15 @@
+{
+  "email": {
+    "subject": "[site-watch] Change detected: Supplier price list",
+    "body": "A change was detected on 'Supplier price list'.\n\nURL: http://127.0.0.1:8765/prices\nTime: 2026-11-12T02:13:00\nLines added: 1, lines removed: 1\nEvidence folder, inside the site-watch data folder: evidence/2026-11-12/021300-supplier-price-list\nThe email version of this alert has the diff and both screenshots attached.\n\nDiff:\n--- before\n+++ after\n@@ -2,4 +2,4 @@\n Widget bracket, steel \u00a314.31\n Hex bolt M8 (box of 100) \u00a38.66\n Rubber grommet 20 mm \u00a326.74\n-Cable tie 300 mm (pack) \u00a34.75\n+Cable tie 300 mm (pack) \u00a34.28\n"
+  },
+  "webhook": {
+    "watch": "Supplier price list",
+    "url": "http://127.0.0.1:8765/prices",
+    "at": "2026-11-12T02:13:00",
+    "evidence": "evidence/2026-11-12/021300-supplier-price-list",
+    "added": 1,
+    "removed": 1,
+    "diff": "--- before\n+++ after\n@@ -2,4 +2,4 @@\n Widget bracket, steel \u00a314.31\n Hex bolt M8 (box of 100) \u00a38.66\n Rubber grommet 20 mm \u00a326.74\n-Cable tie 300 mm (pack) \u00a34.75\n+Cable tie 300 mm (pack) \u00a34.28"
+  }
+}

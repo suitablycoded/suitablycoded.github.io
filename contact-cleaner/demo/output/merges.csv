@@ -1,0 +1,53 @@
+Kept row,Merged row,Email,Fields filled in,Values not kept
+4,21,fatima.smithjones@example.net,,job_title='Sales Lead'
+6,451,lily.wright@pretend.example.com,,
+14,467,grace.taylor@dummy.example.com,,
+18,48,ewan.evans@example.co.uk,,
+28,31,fatima.taylor@example.co.uk,,
+29,34,noah.darcy@sample.example.org,,
+29,313,noah.darcy@sample.example.org,,
+33,38,freya.mckenzie@example.co.uk,,
+33,96,freya.mckenzie@example.co.uk,,
+39,331,george.wright@example.net,,
+45,205,ruby.ashworthlee@dummy.example.com,,
+52,163,mary.smith@exmaple.com,,
+55,206,sophie.macleod@pretend.example.com,,
+55,224,sophie.macleod@pretend.example.com,,job_title='Operations Manager'
+56,199,ewan.thomas@notreal.example.com,,
+61,321,priya.oneill@example.net,,
+65,116,hamish.smithjones@pretend.example.com,,mobile='+447700900950'; job_title='Accounts Assistant'; address='35 Victoria Road'; city='Placeholder-on-Sea'; postcode='NE3 4XZ'; country='UK'
+67,372,siobhan.williams@example.co.uk,,
+67,512,siobhan.williams@example.co.uk,,
+69,281,oscar.oneill@imaginary.example.org,,
+73,324,isla.robinson@example.co.uk,,
+79,376,mary.evans@fictional.example.org,,job_title='Operations Manager'
+84,111,oliver.edwards@demo.example.com,,
+87,138,niamh.fletcher@placeholder.example.com,,
+97,113,freya.smithjones@imaginary.example.org,,
+102,315,yusuf.macleod@dummy.example.com,,job_title='Accounts Assistant'
+109,128,charlie.williams@notreal.example.com,,
+114,296,freya.mckenzie@imaginary.example.org,,
+130,200,jeanluc.brown@exmaple.com,,
+143,156,sophie.mcdonald@demo.example.com,,job_title='Office Manager'
+154,172,grace.thomas1@example.net,,
+185,551,fatima.wilson@notreal.example.com,,
+185,570,fatima.wilson@notreal.example.com,,
+188,308,chloe.macleod@pretend.example.com,,job_title='Office Manager'
+202,250,lily.mcdonald@demo.example.com,,
+208,588,charlie.vanderberg@example.net,,job_title='Operations Manager'
+240,335,evie.ashworthlee@placeholder.example.com,,
+244,479,leo.thomas@pretend.example.com,,job_title='Operations Manager'
+246,435,siobhan.hall@fictional.example.org,,
+255,346,mary.macleod@testbed.example.com,,job_title='Owner'
+279,290,niamh.williams@mock.example.com,,job_title='Sales Lead'
+280,499,isla.williams@mock.example.com,job_title,
+289,549,lily.clarke@fictional.example.org,,
+295,417,leo.macleod@pretend.example.com,,
+297,522,ewan.wilson@notreal.example.com,,
+300,568,fatima.hughes49@example.net,,
+348,561,lily.obrien@imaginary.example.org,job_title,
+361,420,mia.brown@dummy.example.com,,
+377,491,grace.obrien@example.co.uk,,
+423,571,arjun.walker@sample.example.org,,job_title='Buyer'
+433,502,mary.thomas@dummy.example.com,,
+556,470,grace.obrien@mock.example.com,,job_title='Director'; address='184 Mill Road'; city='Testbury'; postcode='BS15 1ZZ'; country='United Kingdom'; date_added='2022-12-27'

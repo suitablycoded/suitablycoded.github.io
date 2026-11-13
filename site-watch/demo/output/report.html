@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>site-watch evidence report</title><style>
+body { font-family: system-ui, sans-serif; margin: 0; background: #f4f5f7; color: #1d2330; }
+header { background: #1d2330; color: #fff; padding: 20px 32px; }
+header h1 { margin: 0 0 4px; font-size: 22px; }
+header p { margin: 0; color: #c5cad6; }
+main { padding: 24px 32px; max-width: 1400px; }
+.change { background: #fff; border: 1px solid #d8dce4; border-radius: 6px; margin-bottom: 28px; padding: 16px 20px; }
+.change h2 { margin: 0 0 4px; font-size: 18px; }
+.meta { color: #5b6475; font-size: 14px; margin-bottom: 12px; }
+.meta a { color: #2457c5; }
+pre.diff { background: #fafbfc; border: 1px solid #e3e6ec; padding: 10px; overflow-x: auto; font-size: 13px; line-height: 1.45; }
+pre.diff span { display: block; padding: 0 4px; }
+.add { background: #e3f6e5; color: #145c1e; }
+.del { background: #fde6e6; color: #8a1616; }
+.hunk { color: #6a5acd; }
+.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.shots figure { margin: 0; }
+.shots figcaption { font-weight: 600; margin-bottom: 6px; }
+.shots img { width: 100%; border: 1px solid #d8dce4; }
+table { border-collapse: collapse; background: #fff; font-size: 14px; }
+td, th { border: 1px solid #d8dce4; padding: 6px 10px; text-align: left; }
+</style></head>
+<body><header><h1>site-watch evidence report</h1>
+<p>6 change(s), 0 failed check(s), 0 alert(s) not sent. Newest first.</p></header>
+<main>
+<section class="change">
+  <h2>Planning notices</h2>
+  <div class="meta">2026-11-12 02:13:01 &middot; lines +1/-0 &middot;
+    <a href="http://127.0.0.1:8765/planning">http://127.0.0.1:8765/planning</a></div>
+  <pre class="diff"><span class="hunk">--- before</span><span class="hunk">+++ after</span><span class="hunk">@@ -1,3 +1,4 @@</span><span class=""> PA/0412: Single-storey rear extension, 14 Example Lane, Testville</span><span class=""> PA/0417: Change of use from shop to cafe, 3 Sample Street, Testville</span><span class=""> PA/0421: Two new dwellings on land behind 8 Demo Road, Testville</span><span class="add">+PA/0430: Replacement windows, Old Mill House, Mockford</span></pre>
+  <div class="shots">
+    <figure><figcaption>Before</figcaption><img src="images/0010-before.png" alt="Before"></figure>
+    <figure><figcaption>After</figcaption><img src="images/0010-after.png" alt="After"></figure>
+  </div>
+</section>
+<section class="change">
+  <h2>Supplier price list</h2>
+  <div class="meta">2026-11-12 02:13:00 &middot; lines +1/-1 &middot;
+    <a href="http://127.0.0.1:8765/prices">http://127.0.0.1:8765/prices</a></div>
+  <pre class="diff"><span class="hunk">--- before</span><span class="hunk">+++ after</span><span class="hunk">@@ -2,4 +2,4 @@</span><span class=""> Widget bracket, steel £14.31</span><span class=""> Hex bolt M8 (box of 100) £8.66</span><span class=""> Rubber grommet 20 mm £26.74</span><span class="del">-Cable tie 300 mm (pack) £4.75</span><span class="add">+Cable tie 300 mm (pack) £4.28</span></pre>
+  <div class="shots">
+    <figure><figcaption>Before</figcaption><img src="images/0009-before.png" alt="Before"></figure>
+    <figure><figcaption>After</figcaption><img src="images/0009-after.png" alt="After"></figure>
+  </div>
+</section>
+<section class="change">
+  <h2>Delivery lead times</h2>
+  <div class="meta">2026-11-12 02:12:58 &middot; lines +1/-1 &middot;
+    <a href="http://127.0.0.1:8765/delivery">http://127.0.0.1:8765/delivery</a></div>
+  <pre class="diff"><span class="hunk">--- before</span><span class="hunk">+++ after</span><span class="hunk">@@ -1,4 +1,4 @@</span><span class=""> Region Lead time</span><span class="del">-North (fictional) 3 working days</span><span class="add">+North (fictional) 5 working days</span><span class=""> South (fictional) 2 working days</span><span class=""> Islands (fictional) 7 working days</span></pre>
+  <div class="shots">
+    <figure><figcaption>Before</figcaption><img src="images/0008-before.png" alt="Before"></figure>
+    <figure><figcaption>After</figcaption><img src="images/0008-after.png" alt="After"></figure>
+  </div>
+</section>
+<section class="change">
+  <h2>Stock status</h2>
+  <div class="meta">2026-11-12 02:12:57 &middot; lines +1/-1 &middot;
+    <a href="http://127.0.0.1:8765/stock">http://127.0.0.1:8765/stock</a></div>
+  <pre class="diff"><span class="hunk">--- before</span><span class="hunk">+++ after</span><span class="hunk">@@ -1,3 +1,3 @@</span><span class=""> Example Parts Depot: stock status</span><span class=""> Fictional demo page. Not a real business.</span><span class="del">-Model DX-200 demo unit: Low stock</span><span class="add">+Model DX-200 demo unit: Out of stock</span></pre>
+  <div class="shots">
+    <figure><figcaption>Before</figcaption><img src="images/0007-before.png" alt="Before"></figure>
+    <figure><figcaption>After</figcaption><img src="images/0007-after.png" alt="After"></figure>
+  </div>
+</section>
+<section class="change">
+  <h2>Planning notices</h2>
+  <div class="meta">2026-11-12 02:12:52 &middot; lines +1/-0 &middot;
+    <a href="http://127.0.0.1:8765/planning">http://127.0.0.1:8765/planning</a></div>
+  <pre class="diff"><span class="hunk">--- before</span><span class="hunk">+++ after</span><span class="hunk">@@ -1,2 +1,3 @@</span><span class=""> PA/0412: Single-storey rear extension, 14 Example Lane, Testville</span><span class=""> PA/0417: Change of use from shop to cafe, 3 Sample Street, Testville</span><span class="add">+PA/0421: Two new dwellings on land behind 8 Demo Road, Testville</span></pre>
+  <div class="shots">
+    <figure><figcaption>Before</figcaption><img src="images/0006-before.png" alt="Before"></figure>
+    <figure><figcaption>After</figcaption><img src="images/0006-after.png" alt="After"></figure>
+  </div>
+</section>
+<section class="change">
+  <h2>Supplier price list</h2>
+  <div class="meta">2026-11-12 02:12:51 &middot; lines +1/-1 &middot;
+    <a href="http://127.0.0.1:8765/prices">http://127.0.0.1:8765/prices</a></div>
+  <pre class="diff"><span class="hunk">--- before</span><span class="hunk">+++ after</span><span class="hunk">@@ -1,5 +1,5 @@</span><span class=""> Item Price</span><span class=""> Widget bracket, steel £14.31</span><span class="del">-Hex bolt M8 (box of 100) £7.73</span><span class="add">+Hex bolt M8 (box of 100) £8.66</span><span class=""> Rubber grommet 20 mm £26.74</span><span class=""> Cable tie 300 mm (pack) £4.75</span></pre>
+  <div class="shots">
+    <figure><figcaption>Before</figcaption><img src="images/0005-before.png" alt="Before"></figure>
+    <figure><figcaption>After</figcaption><img src="images/0005-after.png" alt="After"></figure>
+  </div>
+</section></main></body></html>

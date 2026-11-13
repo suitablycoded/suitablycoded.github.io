@@ -1,0 +1,25 @@
+{
+  "title": "Route scheduler",
+  "one_line": "Assigns a day of service jobs to technicians and orders each route within every rule.",
+  "problem": "A fire and security servicing firm books a high volume of jobs by dragging each one onto a calendar by hand. They want jobs assigned to the right technicians automatically, in an order that cuts driving time and keeps visits on time.",
+  "what_it_does": [
+    "Builds a full day plan that respects skills, time windows, working hours and lunch",
+    "On the sample day: 38 of 40 jobs placed, 0 late, 364.9 min travel, against 31 done, 12 late and 592.5 min for a manual plan",
+    "Shows routes on a real map of the Harrogate area and a timeline per technician",
+    "Lets the planner drag jobs between technicians and flags any rule a move breaks",
+    "Explains in plain words why a job cannot be placed",
+    "Imports and exports jobs as CSV and exports the schedule, reporting bad rows by line number"
+  ],
+  "tools": ["HTML", "CSS", "JavaScript (ES modules)", "SVG", "Node.js test runner", "Playwright"],
+  "run": [
+    "python -m http.server 8000",
+    "Open http://localhost:8000/index.html",
+    "node --test"
+  ],
+  "demo_path": "index.html",
+  "screenshots": [
+    "screenshots/01-manual-plan.png",
+    "screenshots/02-auto-scheduled.png",
+    "screenshots/03-phone.png"
+  ]
+}

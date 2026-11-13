@@ -1,0 +1,65 @@
+{
+  "owner_name": "Fathom IT",
+  "tagline": "Working software for small businesses: automations, small web apps and data clean-up tools.",
+  "contact_url": "mailto:fathomit.freelance@gmail.com",
+  "contact_label": "Email Fathom IT",
+  "repo_url": "https://github.com/fathomit/fathomit.github.io",
+  "repo_branch": "main",
+  "projects": [
+    {
+      "folder": "route-scheduler",
+      "short_title": "Route scheduler",
+      "kind": "Small web app",
+      "action": "Try it",
+      "alt": [
+        "The manual plan: day totals, a map of the Harrogate area with each technician's route and a timeline of jobs per technician, with late jobs and rule breaks marked.",
+        "The scheduler after auto-scheduling: day totals compared with the manual plan, shorter routes on the map and a reordered timeline.",
+        "The scheduler on a phone screen, with the day totals and map stacked in one column."
+      ],
+      "card_shot": 2,
+      "card_alt": "Close-up of the auto-scheduled day: total travel, distance and jobs done, each next to the manual plan figure, above the start of the route map.",
+      "readme_summary": "A browser app for a servicing firm that books a day of jobs by hand. It assigns jobs to technicians with the right skills, respects time windows, working hours and lunch, and orders each route within every rule. It compares the result with a manual plan, shows routes on a map and a timeline, lets the planner drag jobs between technicians, and imports and exports CSV. Built with HTML, CSS, JavaScript and SVG, with no server.",
+      "compare_note": "The baseline is a sensible manual plan, and the main gain is no late jobs and no rule breaks, with less travel as well.",
+      "demo_note": "It opens on the manual plan. Press Auto-schedule to see the planned day."
+    },
+    {
+      "folder": "site-watch",
+      "short_title": "Site watch",
+      "kind": "Automation",
+      "action": "See the output",
+      "alt": [
+        "The evidence report: a list of detected changes, each with a text diff and before and after screenshots of the page.",
+        "One change in detail: the diff shows a new planning notice added, with before and after screenshots side by side."
+      ],
+      "card_shot": 2,
+      "card_alt": "Close-up of one detected change: the diff with the new planning notice highlighted, above the start of the before screenshot.",
+      "readme_summary": "A command-line tool that checks web pages on a schedule and alerts on real changes. It loads pages in a headless browser, compares only the part of the page you choose, ignores noise such as timestamps, and keeps before and after text, a diff and screenshots for every change in an HTML evidence report. Built with Python, Playwright and SQLite.",
+      "shots_note": "The address in these screenshots is a local test server. The demo runs against fictional sample pages on your own computer, so no real website is contacted.",
+      "demo_note": "The report comes from fictional sample pages served on a local test server, so no real website is contacted."
+    },
+    {
+      "folder": "contact-cleaner",
+      "short_title": "Contact cleaner",
+      "kind": "Data clean-up",
+      "action": "See the output",
+      "alt": [
+        "The messy input spreadsheet: names in capitals, phone numbers in many formats, mixed date styles and repeated people.",
+        "The clean-up report counting each kind of change, with examples.",
+        "The clean output file with consistent names, emails, phone numbers, postcodes and dates."
+      ],
+      "extra_links": [
+        {
+          "label": "Messy input workbook (.xlsx)",
+          "path": "demo/input/messy_contacts.xlsx"
+        },
+        {
+          "label": "Clean output (.csv)",
+          "path": "demo/output/clean_contacts.csv"
+        }
+      ],
+      "card_shot": 2,
+      "card_alt": "Close-up of the clean-up report: tiles for 600 rows in, 515 clean contacts out and 33 rejected, with a line checking that the counts add up.",
+      "readme_summary": "A command-line tool that turns a messy contact spreadsheet into a file a CRM will accept. It fixes names, emails, UK phone numbers, dates and postcodes, merges exact duplicates, flags likely ones for a person to decide, sets aside rows with no way to contact anyone, and writes a report counting every change. Built with Python and openpyxl."
+    }
+  ]
+}

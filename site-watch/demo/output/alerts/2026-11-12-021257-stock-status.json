@@ -1,0 +1,15 @@
+{
+  "email": {
+    "subject": "[site-watch] Change detected: Stock status",
+    "body": "A change was detected on 'Stock status'.\n\nURL: http://127.0.0.1:8765/stock\nTime: 2026-11-12T02:12:57\nLines added: 1, lines removed: 1\nEvidence folder, inside the site-watch data folder: evidence/2026-11-12/021257-stock-status\nThe email version of this alert has the diff and both screenshots attached.\n\nDiff:\n--- before\n+++ after\n@@ -1,3 +1,3 @@\n Example Parts Depot: stock status\n Fictional demo page. Not a real business.\n-Model DX-200 demo unit: Low stock\n+Model DX-200 demo unit: Out of stock\n"
+  },
+  "webhook": {
+    "watch": "Stock status",
+    "url": "http://127.0.0.1:8765/stock",
+    "at": "2026-11-12T02:12:57",
+    "evidence": "evidence/2026-11-12/021257-stock-status",
+    "added": 1,
+    "removed": 1,
+    "diff": "--- before\n+++ after\n@@ -1,3 +1,3 @@\n Example Parts Depot: stock status\n Fictional demo page. Not a real business.\n-Model DX-200 demo unit: Low stock\n+Model DX-200 demo unit: Out of stock"
+  }
+}

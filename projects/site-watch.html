@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site watch: Fathom IT</title>
+<meta name="description" content="Checks web pages on a schedule, alerts on real changes and keeps before-and-after screenshot evidence.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap top-inner">
+<a class="brand" href="../index.html">Fathom IT</a>
+<nav aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#how">How a job runs</a><a href="https://github.com/fathomit/fathomit.github.io">Source code</a><a class="btn btn-primary" href="mailto:fathomit.freelance@gmail.com">Email Fathom IT</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="hero hero-3d project-hero" data-scene="site-watch">
+<canvas id="hero-3d" aria-hidden="true"></canvas>
+<div class="wrap">
+<p class="crumb"><a href="../index.html#work">All projects</a></p>
+<p class="kind">Automation</p>
+<h1>site-watch: website change monitor with screenshot evidence</h1>
+<p class="lede">Checks web pages on a schedule, alerts on real changes and keeps before-and-after screenshot evidence.</p>
+
+</div>
+</section>
+<script type="module" src="../assets/project3d.js"></script>
+<article class="wrap project">
+<h2>The problem</h2>
+<blockquote class="problem"><p>A business needs to know when a supplier price list, a council notices page or a stock page changes, but checking by hand is slow and easy to forget. When something does change they need proof of what the page said before and after.</p></blockquote>
+<h2>What it does</h2>
+<ul class="ticks"><li>Loads each page in a headless browser and waits for scripts that fetch data after load</li><li>Compares only the part of the page you choose, with regex rules to ignore timestamps and other noise</li><li>Saves before and after text, a diff and page screenshots for every change</li><li>Sends alerts by email and webhook, or writes them to files in dry-run mode</li><li>Builds an HTML evidence report in one folder that can be copied anywhere</li><li>Records timeouts, HTTP errors and missing page sections as failed checks, never as false changes, and keeps checking the other pages</li></ul>
+<h2>See the sample output</h2>
+<p>This is the real report the tool produced from the sample run.</p>
+<p class="demo-note">The report comes from fictional sample pages served on a local test server, so no real website is contacted.</p>
+<p class="actions"><a class="btn btn-primary" href="../site-watch/demo/output/report.html">Open the sample report</a></p>
+
+<h2>Screenshots</h2>
+<p class="demo-note">The address in these screenshots is a local test server. The demo runs against fictional sample pages on your own computer, so no real website is contacted.</p><figure class="shot">
+<a href="../site-watch/demo/output/preview-report.png"><img src="../assets/img/site-watch-1.jpg" srcset="../assets/img/site-watch-1-sm.jpg 640w, ../assets/img/site-watch-1.jpg 1200w" sizes="(min-width: 1000px) 920px, 100vw" alt="The evidence report: a list of detected changes, each with a text diff and before and after screenshots of the page." loading="lazy"></a>
+<figcaption>The evidence report: a list of detected changes, each with a text diff and before and after screenshots of the page. <a href="../site-watch/demo/output/preview-report.png">Full size</a></figcaption>
+</figure>
+<figure class="shot">
+<a href="../site-watch/demo/output/preview-change.png"><img src="../assets/img/site-watch-2.jpg" srcset="../assets/img/site-watch-2-sm.jpg 640w, ../assets/img/site-watch-2.jpg 1200w" sizes="(min-width: 1000px) 920px, 100vw" alt="One change in detail: the diff shows a new planning notice added, with before and after screenshots side by side." loading="lazy"></a>
+<figcaption>One change in detail: the diff shows a new planning notice added, with before and after screenshots side by side. <a href="../site-watch/demo/output/preview-change.png">Full size</a></figcaption>
+</figure>
+<h2>How to run it</h2>
+<pre><code>python -m venv .venv &amp;&amp; .venv\Scripts\activate &amp;&amp; pip install -e &quot;.[test]&quot; &amp;&amp; python -m playwright install chromium</code></pre>
+<pre><code>python demo/run_demo.py</code></pre>
+<pre><code>site-watch -c watches.json check --dry-run</code></pre>
+<p>Full instructions are in the project&#8217;s <a href="https://github.com/fathomit/fathomit.github.io/blob/main/site-watch/README.md">README</a>.</p>
+<h2>Tools used</h2>
+<ul class="tools"><li>Python</li><li>Playwright (Chromium)</li><li>SQLite</li><li>pytest</li></ul>
+<h2>Honest limits</h2>
+<ul class="limits"><li>It compares visible text, not layout, colours or images. A change that only affects how a page looks is not detected.</li><li>It does not log in to sites or fill in forms.</li><li>It does not get past CAPTCHAs or bot blocking.</li><li>Failed checks are logged, recorded and shown in the report, but no alert is sent for them.</li><li>Content that a script adds without any network request is only read if you set <code>wait_for</code> or <code>settle_seconds</code>.</li><li>Screenshots stop at 20,000 pixels from the top of the page. Chromium cannot capture very tall pages in one image (in testing, 300,000 pixels worked and 700,000 did not), so site-watch caps the height. The text of the whole page is still compared, so a change further down is still detected; it is just not in the screenshot.</li><li>A page that keeps making network requests never goes quiet, so each check of it waits the full 10 seconds before reading.</li><li>A removed watch keeps its history in the report. Adding it back, or changing the URL of an existing name, compares against the old snapshot.</li><li>Watch names are cut to 60 characters for folder names, so two names that only differ after that count as the same.</li><li>The evidence path in an alert is relative to the data folder on the machine that runs site-watch. Email alerts carry the files as attachments; webhook alerts do not.</li><li>Times are local time with no time zone. Email over implicit TLS (port 465) is not supported; use STARTTLS.</li><li>One process runs the checks one page at a time. It is meant for tens of pages, not thousands.</li><li>Evidence and screenshots are kept until you delete them.</li></ul>
+<p><a class="btn" href="https://github.com/fathomit/fathomit.github.io/tree/main/site-watch">View the source for this project</a></p>
+<p class="note">All data in this sample is fictional.</p>
+</article>
+</main>
+<footer class="foot">
+<div class="wrap">
+<p>All names, companies, addresses and figures in these samples are fictional.</p>
+<p>Fathom IT</p>
+</div>
+</footer>
+<script src="../assets/touches.js" defer></script>
+</body>
+</html>

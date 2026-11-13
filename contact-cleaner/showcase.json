@@ -1,0 +1,33 @@
+{
+  "title": "Contact cleaner: messy spreadsheet to CRM import",
+  "one_line": "Cleans a messy contact spreadsheet into a file a CRM will accept, and reports every change.",
+  "problem": "A business has a contact spreadsheet built up over years, with names in capitals, phone numbers in ten formats and the same people listed several times. Its CRM import rejects the file or fills the CRM with junk.",
+  "what_it_does": [
+    "Guesses which column is which and lets a mapping file correct it",
+    "Fixes names, splits full names, and formats emails, UK phone numbers, dates and postcodes",
+    "Merges exact duplicates and flags likely ones for a person to decide",
+    "Sets aside rows with no way to contact anyone, with the reason",
+    "Writes a one-page report counting every change, with examples",
+    "Traces every output row back to its original row number"
+  ],
+  "tools": ["Python 3.11", "openpyxl", "phonenumbers", "PyYAML", "pytest", "Playwright (screenshots only)"],
+  "run": [
+    "pip install -r requirements.txt && pip install -e .",
+    "python demo/run_demo.py",
+    "contact-cleaner clean contacts.xlsx --out cleaned"
+  ],
+  "demo_path": "demo/output/report.html",
+  "screenshots": [
+    "screenshots/01-messy-input.png",
+    "screenshots/02-report.png",
+    "screenshots/03-clean-output.png"
+  ],
+  "figures": {
+    "rows_in": 600,
+    "clean_contacts": 515,
+    "rejected": 33,
+    "merged_duplicates": 52,
+    "kept_rows_flagged_for_review": 235,
+    "individual_changes": 2932
+  }
+}

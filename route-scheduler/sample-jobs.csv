@@ -1,0 +1,25 @@
+id,customer,area,x_km,y_km,duration_min,window_start,window_end,skill,priority
+S001,Pannal Pharmacy,Pannal,9.7,11.5,45,08:00,12:30,Emergency lighting,1
+S002,Farnham Dental Practice,Farnham,17.2,3.9,30,12:30,17:00,Fire alarm,3
+S003,Pannal Medical Centre,Pannal,9.2,9.1,60,08:00,17:00,Extinguishers,2
+S004,Pannal Warehouse,Pannal,11.9,9,60,12:30,17:00,Intruder alarm,2
+S005,Beckwithshaw Cafe,Beckwithshaw,2.3,11.9,60,12:30,17:00,Extinguishers,1
+S006,Nidd Builders Yard,Nidd,9.5,2.6,20,08:00,17:00,Emergency lighting,1
+S007,Beckwithshaw Hotel,Beckwithshaw,4.4,9.3,30,08:00,17:00,Intruder alarm,3
+S008,Follifoot Builders Yard,Follifoot,17.9,10.4,30,12:30,17:00,CCTV,2
+S009,Follifoot Warehouse,Follifoot,17.7,12.6,30,09:30,11:30,Extinguishers,2
+S010,Follifoot Primary School,Follifoot,15.1,10.8,20,08:00,17:00,Intruder alarm,3
+S011,Nidd Medical Centre,Nidd,8.6,3.4,60,08:00,17:00,Fire alarm,2
+S012,Birstwith Dental Practice,Birstwith,4.7,3.7,45,08:00,17:00,Emergency lighting,2
+S013,Beckwithshaw Community Hall,Beckwithshaw,1.9,11.2,60,08:00,12:30,Extinguishers,3
+S014,Beckwithshaw Vet Clinic,Beckwithshaw,2.4,11.2,30,08:00,12:30,Emergency lighting,2
+S015,Beckwithshaw Warehouse,Beckwithshaw,3.4,9.3,45,08:00,12:30,Intruder alarm,2
+S016,Pannal Chapel Hall,Pannal,12.4,11.3,45,08:00,17:00,CCTV,2
+S017,Birstwith Nursery,Birstwith,5.8,2.4,60,10:00,12:00,Extinguishers,2
+S018,Follifoot Warehouse (annexe),Follifoot,16.6,9.1,90,12:30,17:00,Emergency lighting,1
+S019,Beckwithshaw Care Home,Beckwithshaw,3.2,9.5,20,08:00,12:30,Extinguishers,2
+S020,Pannal Chapel Hall (annexe),Pannal,12.8,8.7,30,08:00,17:00,Intruder alarm,1
+S021,Birstwith Office Block,Birstwith,5.8,2,30,08:00,17:00,Emergency lighting,1
+S022,Nidd Sports Centre,Nidd,11.8,4.2,60,12:30,17:00,CCTV,1
+S023,Nidd Sports Centre (annexe),Nidd,11.2,1.6,60,08:00,17:00,Emergency lighting,3
+S024,Follifoot Office Block,Follifoot,17.8,8.7,20,12:30,17:00,Fire alarm,2

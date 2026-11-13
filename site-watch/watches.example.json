@@ -1,0 +1,18 @@
+{
+  "data_dir": "data",
+  "timeout_seconds": 20,
+  "watches": [
+    {
+      "name": "Example price list",
+      "url": "https://www.example.com/prices",
+      "selector": "#price-table",
+      "ignore": ["Updated [0-9]{2}:[0-9]{2}"],
+      "interval_minutes": 60
+    },
+    {
+      "name": "Example notices page",
+      "url": "https://www.example.com/notices",
+      "interval_minutes": 1440
+    }
+  ]
+}

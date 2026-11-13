@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==75.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "site-watch"
+version = "1.0.0"
+description = "Watch web pages for changes, keep screenshot evidence and send alerts."
+requires-python = ">=3.10"
+dependencies = ["playwright==1.48.0"]
+
+[project.optional-dependencies]
+test = ["pytest==8.3.3"]
+
+[project.scripts]
+site-watch = "site_watch.cli:main"
+
+[tool.setuptools]
+packages = ["site_watch"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

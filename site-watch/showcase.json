@@ -1,0 +1,21 @@
+{
+  "title": "site-watch: website change monitor with screenshot evidence",
+  "one_line": "Checks web pages on a schedule, alerts on real changes and keeps before-and-after screenshot evidence.",
+  "problem": "A business needs to know when a supplier price list, a council notices page or a stock page changes, but checking by hand is slow and easy to forget. When something does change they need proof of what the page said before and after.",
+  "what_it_does": [
+    "Loads each page in a headless browser and waits for scripts that fetch data after load",
+    "Compares only the part of the page you choose, with regex rules to ignore timestamps and other noise",
+    "Saves before and after text, a diff and page screenshots for every change",
+    "Sends alerts by email and webhook, or writes them to files in dry-run mode",
+    "Builds an HTML evidence report in one folder that can be copied anywhere",
+    "Records timeouts, HTTP errors and missing page sections as failed checks, never as false changes, and keeps checking the other pages"
+  ],
+  "tools": ["Python", "Playwright (Chromium)", "SQLite", "pytest"],
+  "run": [
+    "python -m venv .venv && .venv\\Scripts\\activate && pip install -e \".[test]\" && python -m playwright install chromium",
+    "python demo/run_demo.py",
+    "site-watch -c watches.json check --dry-run"
+  ],
+  "demo_path": "demo/output/report.html",
+  "screenshots": ["demo/output/preview-report.png", "demo/output/preview-change.png"]
+}

@@ -1,0 +1,15 @@
+{
+  "email": {
+    "subject": "[site-watch] Change detected: Planning notices",
+    "body": "A change was detected on 'Planning notices'.\n\nURL: http://127.0.0.1:8765/planning\nTime: 2026-11-12T02:13:01\nLines added: 1, lines removed: 0\nEvidence folder, inside the site-watch data folder: evidence/2026-11-12/021301-planning-notices\nThe email version of this alert has the diff and both screenshots attached.\n\nDiff:\n--- before\n+++ after\n@@ -1,3 +1,4 @@\n PA/0412: Single-storey rear extension, 14 Example Lane, Testville\n PA/0417: Change of use from shop to cafe, 3 Sample Street, Testville\n PA/0421: Two new dwellings on land behind 8 Demo Road, Testville\n+PA/0430: Replacement windows, Old Mill House, Mockford\n"
+  },
+  "webhook": {
+    "watch": "Planning notices",
+    "url": "http://127.0.0.1:8765/planning",
+    "at": "2026-11-12T02:13:01",
+    "evidence": "evidence/2026-11-12/021301-planning-notices",
+    "added": 1,
+    "removed": 0,
+    "diff": "--- before\n+++ after\n@@ -1,3 +1,4 @@\n PA/0412: Single-storey rear extension, 14 Example Lane, Testville\n PA/0417: Change of use from shop to cafe, 3 Sample Street, Testville\n PA/0421: Two new dwellings on land behind 8 Demo Road, Testville\n+PA/0430: Replacement windows, Old Mill House, Mockford"
+  }
+}

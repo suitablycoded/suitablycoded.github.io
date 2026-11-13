@@ -1,0 +1,15 @@
+{
+  "email": {
+    "subject": "[site-watch] Change detected: Delivery lead times",
+    "body": "A change was detected on 'Delivery lead times'.\n\nURL: http://127.0.0.1:8765/delivery\nTime: 2026-11-12T02:12:58\nLines added: 1, lines removed: 1\nEvidence folder, inside the site-watch data folder: evidence/2026-11-12/021258-delivery-lead-times\nThe email version of this alert has the diff and both screenshots attached.\n\nDiff:\n--- before\n+++ after\n@@ -1,4 +1,4 @@\n Region Lead time\n-North (fictional) 3 working days\n+North (fictional) 5 working days\n South (fictional) 2 working days\n Islands (fictional) 7 working days\n"
+  },
+  "webhook": {
+    "watch": "Delivery lead times",
+    "url": "http://127.0.0.1:8765/delivery",
+    "at": "2026-11-12T02:12:58",
+    "evidence": "evidence/2026-11-12/021258-delivery-lead-times",
+    "added": 1,
+    "removed": 1,
+    "diff": "--- before\n+++ after\n@@ -1,4 +1,4 @@\n Region Lead time\n-North (fictional) 3 working days\n+North (fictional) 5 working days\n South (fictional) 2 working days\n Islands (fictional) 7 working days"
+  }
+}

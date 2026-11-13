@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Route scheduler: Fathom IT</title>
+<meta name="description" content="Assigns a day of service jobs to technicians and orders each route within every rule.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap top-inner">
+<a class="brand" href="../index.html">Fathom IT</a>
+<nav aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#how">How a job runs</a><a href="https://github.com/fathomit/fathomit.github.io">Source code</a><a class="btn btn-primary" href="mailto:fathomit.freelance@gmail.com">Email Fathom IT</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="hero hero-3d project-hero" data-scene="route-scheduler">
+<canvas id="hero-3d" aria-hidden="true"></canvas>
+<div class="wrap">
+<p class="crumb"><a href="../index.html#work">All projects</a></p>
+<p class="kind">Small web app</p>
+<h1>Route scheduler</h1>
+<p class="lede">Assigns a day of service jobs to technicians and orders each route within every rule.</p>
+<p class="map-credit">Map of Harrogate: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Routes planned with OSRM.</p>
+</div>
+</section>
+<script type="module" src="../assets/project3d.js"></script>
+<article class="wrap project">
+<h2>The problem</h2>
+<blockquote class="problem"><p>A fire and security servicing firm books a high volume of jobs by dragging each one onto a calendar by hand. They want jobs assigned to the right technicians automatically, in an order that cuts driving time and keeps visits on time.</p></blockquote>
+<h2>What it does</h2>
+<ul class="ticks"><li>Builds a full day plan that respects skills, time windows, working hours and lunch</li><li>On the sample day: 38 of 40 jobs placed, 0 late, 364.9 min travel, against 31 done, 12 late and 592.5 min for a manual plan</li><li>Shows routes on a real map of the Harrogate area and a timeline per technician</li><li>Lets the planner drag jobs between technicians and flags any rule a move breaks</li><li>Explains in plain words why a job cannot be placed</li><li>Imports and exports jobs as CSV and exports the schedule, reporting bad rows by line number</li></ul>
+<h2>Before and after on the sample day</h2>
+<p>The baseline is a sensible manual plan, and the main gain is no late jobs and no rule breaks, with less travel as well.</p>
+<div class="pair">
+<figure class="shot">
+<a href="../route-scheduler/screenshots/01-manual-plan.png"><img src="../assets/img/route-scheduler-1.jpg" srcset="../assets/img/route-scheduler-1-sm.jpg 640w, ../assets/img/route-scheduler-1.jpg 1200w" sizes="(min-width: 900px) 460px, 100vw" alt="The manual plan: day totals, a map of the Harrogate area with each technician&#x27;s route and a timeline of jobs per technician, with late jobs and rule breaks marked." loading="lazy"></a>
+<figcaption>The manual plan: day totals, a map of the Harrogate area with each technician&#x27;s route and a timeline of jobs per technician, with late jobs and rule breaks marked. <a href="../route-scheduler/screenshots/01-manual-plan.png">Full size</a></figcaption>
+</figure>
+<figure class="shot">
+<a href="../route-scheduler/screenshots/02-auto-scheduled.png"><img src="../assets/img/route-scheduler-2.jpg" srcset="../assets/img/route-scheduler-2-sm.jpg 640w, ../assets/img/route-scheduler-2.jpg 1200w" sizes="(min-width: 900px) 460px, 100vw" alt="The scheduler after auto-scheduling: day totals compared with the manual plan, shorter routes on the map and a reordered timeline." loading="lazy"></a>
+<figcaption>The scheduler after auto-scheduling: day totals compared with the manual plan, shorter routes on the map and a reordered timeline. <a href="../route-scheduler/screenshots/02-auto-scheduled.png">Full size</a></figcaption>
+</figure>
+</div>
+<div class="table-wrap"><table class="results"><thead><tr><th scope="col">Measure</th><th scope="col">Manual plan</th><th scope="col">Auto-schedule</th></tr></thead><tbody><tr><th scope="row">Total travel</th><td>592.5 min</td><td>364.9 min</td></tr><tr><th scope="row">Total distance</th><td>296.3 km</td><td>182.4 km</td></tr><tr><th scope="row">Jobs done</th><td>31</td><td>38</td></tr><tr><th scope="row">Jobs late</th><td>12</td><td>0</td></tr><tr><th scope="row">Jobs unassigned</th><td>1</td><td>2</td></tr><tr><th scope="row">Rule breaks</th><td>21</td><td>0</td></tr></tbody></table></div>
+<h2>Try it</h2>
+<p>This is the working app, not a recording. It runs entirely in your browser with sample data.</p>
+<p class="actions"><a class="btn btn-primary" href="../route-scheduler/index.html">Open the app full screen</a></p>
+<p class="demo-note">It opens on the manual plan. Press Auto-schedule to see the planned day.</p>
+<div class="embed"><iframe src="../route-scheduler/index.html" title="Route scheduler, live demo" loading="lazy"></iframe></div>
+<script src="../assets/embed.js" defer></script>
+<h2>More screenshots</h2>
+<figure class="shot">
+<a href="../route-scheduler/screenshots/03-phone.png"><img src="../assets/img/route-scheduler-3.jpg" srcset="../assets/img/route-scheduler-3-sm.jpg 640w, ../assets/img/route-scheduler-3.jpg 1200w" sizes="(min-width: 1000px) 920px, 100vw" alt="The scheduler on a phone screen, with the day totals and map stacked in one column." loading="lazy"></a>
+<figcaption>The scheduler on a phone screen, with the day totals and map stacked in one column. <a href="../route-scheduler/screenshots/03-phone.png">Full size</a></figcaption>
+</figure>
+<h2>How to run it</h2>
+<pre><code>python -m http.server 8000</code></pre>
+<p>Open http://localhost:8000/index.html</p>
+<pre><code>node --test</code></pre>
+<p>Full instructions are in the project&#8217;s <a href="https://github.com/fathomit/fathomit.github.io/blob/main/route-scheduler/README.md">README</a>.</p>
+<h2>Tools used</h2>
+<ul class="tools"><li>HTML</li><li>CSS</li><li>JavaScript (ES modules)</li><li>SVG</li><li>Node.js test runner</li><li>Playwright</li></ul>
+<h2>Honest limits</h2>
+<ul class="limits"><li>No road routing or traffic. Distances are straight lines times a fixed factor; the map is a background, and its roads and rivers do not affect travel.</li><li>One day at a time. No multi-day jobs, follow-up visits or parts stock.</li><li>Technicians and their hours are fixed sample data. They can only be changed in the code.</li><li>Lunch is a fixed slot, not a flexible break.</li><li>The method finds a good plan quickly. It does not prove the plan is the best possible.</li><li>It is sized for tens of jobs. With hundreds of jobs and 6 technicians most cannot fit into one day; how many fit depends on the list, and the status line gives the real count and the reasons. Hundreds of jobs would need more technicians and a faster method.</li><li>There is no login, server or shared data. Each browser keeps its own copy.</li></ul>
+<p><a class="btn" href="https://github.com/fathomit/fathomit.github.io/tree/main/route-scheduler">View the source for this project</a></p>
+<p class="note">All data in this sample is fictional.</p>
+</article>
+</main>
+<footer class="foot">
+<div class="wrap">
+<p>All names, companies, addresses and figures in these samples are fictional.</p>
+<p>Fathom IT</p>
+</div>
+</footer>
+<script src="../assets/touches.js" defer></script>
+</body>
+</html>

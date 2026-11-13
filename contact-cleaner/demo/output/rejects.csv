@@ -1,0 +1,34 @@
+Source row,Reason,Full Name,First,Surname,E-mail,Tel,Mobile,Organisation,Position,Address,Town,Post Code,Country,Date Added,Account Manager,Notes
+5,no valid email and no valid phone number,Ms George Williams,,,,,,Notreal Nurseries,,185 Victoria Road,Exampleton,M17 9XE ,UK,2016-07-13 00:00:00,Team C,
+27,no valid email and no valid phone number,,Callum ,Smith,,,,Dummy Data Services,Director,113 Mill Road,Demoworth,B8 8RW,United Kingdom,14th August 2015,Team B  ,Prefers email
+35,no valid email and no valid phone number,,Noah,CLARKE,,,,Dummy Data Services,Office Manager,166 Victoria Road,Demoworth,BS1 4DZ,United Kingdom,21/10/2019,Team B,Prefers email
+60,no valid email and no valid phone number,,Siobhan,McDonald,,,,Dummy Data Services,Operations Manager,118 Park Avenue,Mockham,BS13 6XN,England,2022-09-08 00:00:00,Team C,
+86,no valid email and no valid phone number,,Niamh,macleod,,,,Sample Logistics plc,Buyer,57 Station Road,Placeholder-on-Sea,n10 9au,UK,,,
+94,no valid email and no valid phone number,Dr. Jean-Luc Robinson,,,,,,Sample Logistics plc,Owner,30 Victoria Road,Sampleford,N3 1DY,United Kingdom,01/03/2018,Team B,
+139,empty row,,,,,,,,,,,,,,,
+147,no valid email and no valid phone number,yusuf  d'arcy,,,,,,Demo Bakery Co,Owner,88 Station Road,Exampleton,b14 9hq,England,26/09/2022,,
+149,no valid email and no valid phone number,,priya  ,MACLEOD,,,,	Placeholder Plumbing Ltd,Owner,109 High Street,Testbury,e17 9sh,,4th April 2024,,
+150,no valid email and no valid phone number,Miss  Niamh D'Arcy,,,,,,Imaginary Interiors,Operations Manager,171 High Street,Sampleford,g7 6df,UK  ,11th April 2018,Team C,
+158,no valid email and no valid phone number,,Mia,Wilson,,,,Sample Logistics plc,Sales Lead,25 Church Lane,Mockham,B7 3HG,UK,2018-05-23,Team A,
+171,no valid email and no valid phone number,, Hamish,fletcher,,,,,Sales Lead,153 Church Lane,Mockham,B46RA,,last spring  ,Team A,
+212,no valid email and no valid phone number,,Arthur,	Jones,,,,Placeholder Plumbing Ltd,Buyer,183 High Street,Demoworth,W13 3PL,England,2016-09-11 00:00:00,,Prefers email
+219,no valid email and no valid phone number,,Grace,patel,,,,Notreal Nurseries,Sales Lead ,28 Mill Road,Demoworth,EH15 3HW,United Kingdom,14th September 2022, Team A,
+225,no valid email and no valid phone number,,Lily,MacLeod,,,,Specimen Solicitors LLP,Buyer,63 High Street,Placeholder-on-Sea,EH5 2ED,United Kingdom,2017-10-05 00:00:00,Team C,
+254,"no valid email and no valid phone number ('jeanluc.vanderberg@' is missing the part before or after the @, so it is not a usable email address; removed)",Jean-Luc van der Berg,,,jeanluc.vanderberg@,,,Mock Marketing LLP,,	52 Mill Road,Sampleford,E11 5GU,,06/07/2018,Team C,Do not call before 10am
+269,no valid email and no valid phone number,,Leo,Smith-Jones,,,,Placeholder Plumbing Ltd,Operations Manager,198 High Street,Mockham,SW18 5BW,United  Kingdom,,Team B,Prefers email
+276,no valid email and no valid phone number,Prof Ruby Ashworth-Lee,,,,,,,,114 High Street,Sampleford,CF6 5TF,United Kingdom,06/07/2024,Team B,Met at trade show
+311,no valid email and no valid phone number,hamish de souza,,,,,,Notreal Nurseries,Office Manager,151 Church Lane,Mockham,ne17 9el,UK,2020-02-16 00:00:00,,
+327,no valid email and no valid phone number,Sophie Clarke,,,,,,,,167 Station Road,	Testbury,CF14 3ET,UK,,Team A,Met at trade show
+333,no valid email and no valid phone number,George Clarke,,,,,,Imaginary Interiors, Owner,134 Victoria Road,Placeholder-on-Sea,N3 8FJ,United Kingdom,2021-02-27 00:00:00,Team A,Met at trade show
+402,no valid email and no valid phone number,Mrs Siobhan Brown,,,,,,Demo Bakery Co,Sales Lead,107 Park Avenue,Placeholder-on-Sea,G17 6FJ,UK,29/04/2020,Team C,
+403,no valid email and no valid phone number,,Ava  , Smith,,,,Notreal Nurseries, Office Manager,75 Church Lane,	Demoworth,E136LP  ,UK,2nd August 2020,,
+413,no valid email and no valid phone number,Arthur van der Berg,,,,,,Pretend Print Ltd,Owner,183 Church Lane,Testbury,e16 6lx,,2019-01-15 00:00:00,Team A,Met at trade show
+414,empty row,,,,,,,,,,,,,,,
+437,no valid email and no valid phone number,,Harry,van der Berg,,,,Fictional Foods Ltd,Office Manager,9 Station Road,Demoworth,EH11 4HN,UK,31/03/2019,Team B,
+446,no valid email and no valid phone number,,Evie,MacLeod,,,,Mock Marketing LLP  ,Operations Manager,162 Victoria Road,Placeholder-on-Sea,E8 1LW,England,2020-10-10 00:00:00,,
+461,no valid email and no valid phone number,Zoe Ashworth-Lee PhD,,,,,,Notreal Nurseries,Office Manager,9 Park Avenue,Testbury,N77GX,England,20th March 2016,,
+506,no valid email and no valid phone number,,HAMISH,McKenzie,,,,Testbed Engineering Ltd,Sales Lead ,179 Station Road,Sampleford,BS8 3YW,,23/07/17,Team C ,
+516,no valid email and no valid phone number,,fatima,fletcher,,,,Demo Bakery Co,Buyer,28 Park Avenue,Sampleford,E15 5WS,UK,2024-07-14 00:00:00,Team B,Met at trade show
+553,no valid email and no valid phone number,,Mia,Smith-Jones,,,,Mock Marketing LLP,Director,43 High Street,Sampleford,G4 5JN  ,England,2017-01-27 00:00:00,Team B  ,Prefers email
+566,no valid email and no valid phone number,,freya,O'Brien,,,,Imaginary Interiors,Owner,7 Mill Road,Exampleton,M137XG,UK,26/05/2018,,Do not call before 10am 
+569,"no valid email and no valid phone number ('isla.desouza at demo.example.com' has no @, so it is not a usable email address; removed)",	Isla de Souza,,,isla.desouza at demo.example.com,,,Demo Bakery Co, Owner,136 High Street,Demoworth,CF176DB,England,2024-07-24 00:00:00,Team B  ,

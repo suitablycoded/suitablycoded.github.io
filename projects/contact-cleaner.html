@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact cleaner: Fathom IT</title>
+<meta name="description" content="Cleans a messy contact spreadsheet into a file a CRM will accept, and reports every change.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap top-inner">
+<a class="brand" href="../index.html">Fathom IT</a>
+<nav aria-label="Main"><a href="../index.html#work">Work</a><a href="../index.html#how">How a job runs</a><a href="https://github.com/fathomit/fathomit.github.io">Source code</a><a class="btn btn-primary" href="mailto:fathomit.freelance@gmail.com">Email Fathom IT</a></nav>
+</div>
+</header>
+<main id="main">
+<section class="hero hero-3d project-hero" data-scene="contact-cleaner">
+<canvas id="hero-3d" aria-hidden="true"></canvas>
+<div class="wrap">
+<p class="crumb"><a href="../index.html#work">All projects</a></p>
+<p class="kind">Data clean-up</p>
+<h1>Contact cleaner: messy spreadsheet to CRM import</h1>
+<p class="lede">Cleans a messy contact spreadsheet into a file a CRM will accept, and reports every change.</p>
+
+</div>
+</section>
+<script type="module" src="../assets/project3d.js"></script>
+<article class="wrap project">
+<h2>The problem</h2>
+<blockquote class="problem"><p>A business has a contact spreadsheet built up over years, with names in capitals, phone numbers in ten formats and the same people listed several times. Its CRM import rejects the file or fills the CRM with junk.</p></blockquote>
+<h2>What it does</h2>
+<ul class="ticks"><li>Guesses which column is which and lets a mapping file correct it</li><li>Fixes names, splits full names, and formats emails, UK phone numbers, dates and postcodes</li><li>Merges exact duplicates and flags likely ones for a person to decide</li><li>Sets aside rows with no way to contact anyone, with the reason</li><li>Writes a one-page report counting every change, with examples</li><li>Traces every output row back to its original row number</li></ul>
+<h2>See the sample output</h2>
+<p>This is the real report the tool produced from the sample run.</p>
+
+<p class="actions"><a class="btn btn-primary" href="../contact-cleaner/demo/output/report.html">Open the sample report</a></p>
+<p>Compare the two files yourself:</p><ul class="filelinks"><li><a href="../contact-cleaner/demo/input/messy_contacts.xlsx">Messy input workbook (.xlsx)</a></li><li><a href="../contact-cleaner/demo/output/clean_contacts.csv">Clean output (.csv)</a></li></ul>
+<h2>The sample run in figures</h2>
+<dl class="figures"><div><dt>rows in the messy file</dt><dd>600</dd></div><div><dt>clean contacts out</dt><dd>515</dd></div><div><dt>rows set aside with a reason</dt><dd>33</dd></div><div><dt>exact duplicates merged</dt><dd>52</dd></div><div><dt>kept rows flagged for a person to check</dt><dd>235</dd></div><div><dt>individual changes, each one counted</dt><dd>2932</dd></div></dl>
+<h2>Screenshots</h2>
+<figure class="shot">
+<a href="../contact-cleaner/screenshots/01-messy-input.png"><img src="../assets/img/contact-cleaner-1.jpg" srcset="../assets/img/contact-cleaner-1-sm.jpg 640w, ../assets/img/contact-cleaner-1.jpg 1200w" sizes="(min-width: 1000px) 920px, 100vw" alt="The messy input spreadsheet: names in capitals, phone numbers in many formats, mixed date styles and repeated people." loading="lazy"></a>
+<figcaption>The messy input spreadsheet: names in capitals, phone numbers in many formats, mixed date styles and repeated people. <a href="../contact-cleaner/screenshots/01-messy-input.png">Full size</a></figcaption>
+</figure>
+<figure class="shot">
+<a href="../contact-cleaner/screenshots/02-report.png"><img src="../assets/img/contact-cleaner-2.jpg" srcset="../assets/img/contact-cleaner-2-sm.jpg 640w, ../assets/img/contact-cleaner-2.jpg 1200w" sizes="(min-width: 1000px) 920px, 100vw" alt="The clean-up report counting each kind of change, with examples." loading="lazy"></a>
+<figcaption>The clean-up report counting each kind of change, with examples. <a href="../contact-cleaner/screenshots/02-report.png">Full size</a></figcaption>
+</figure>
+<figure class="shot">
+<a href="../contact-cleaner/screenshots/03-clean-output.png"><img src="../assets/img/contact-cleaner-3.jpg" srcset="../assets/img/contact-cleaner-3-sm.jpg 640w, ../assets/img/contact-cleaner-3.jpg 1200w" sizes="(min-width: 1000px) 920px, 100vw" alt="The clean output file with consistent names, emails, phone numbers, postcodes and dates." loading="lazy"></a>
+<figcaption>The clean output file with consistent names, emails, phone numbers, postcodes and dates. <a href="../contact-cleaner/screenshots/03-clean-output.png">Full size</a></figcaption>
+</figure>
+<h2>How to run it</h2>
+<pre><code>pip install -r requirements.txt &amp;&amp; pip install -e .</code></pre>
+<pre><code>python demo/run_demo.py</code></pre>
+<pre><code>contact-cleaner clean contacts.xlsx --out cleaned</code></pre>
+<p>Full instructions are in the project&#8217;s <a href="https://github.com/fathomit/fathomit.github.io/blob/main/contact-cleaner/README.md">README</a>.</p>
+<h2>Tools used</h2>
+<ul class="tools"><li>Python 3.11</li><li>openpyxl</li><li>phonenumbers</li><li>PyYAML</li><li>pytest</li><li>Playwright (screenshots only)</li></ul>
+<h2>Honest limits</h2>
+<ul class="limits"><li>UK-first. Name rules suit British and Irish names; other naming customs (family name first, single names, patronymics) are not split well and should be checked.</li><li>Postcodes are checked for format only, and only for UK rows.</li><li>Phone numbers are checked against number plans, not that they are in service. An extension is dropped, not moved to another field.</li><li>Unreadable dates and invalid postcodes stay in the clean file as they were (and are flagged), so read review.csv before importing.</li><li>A column headed just &quot;Name&quot; is read as a person&#x27;s full name; the tool prints a note and the report repeats it. If it holds company names, map it with <code>columns: {company: Name}</code>. If two columns look like email, the first is used and the other goes to passthrough.csv.</li><li>Likely duplicates need the same name and company. Nicknames (Bob and Robert) and typos in names are not matched.</li><li>Exact duplicates are matched on email only. Two rows with the same phone number and different emails are not merged.</li><li>Only one date column (Date added) is cleaned. Other date columns go to passthrough unchanged.</li><li>It does not upload anything to a CRM, check emails can receive mail, or look up missing data.</li><li>Files are read into memory. A hundred thousand rows is fine; millions are not what it is for.</li></ul>
+<p><a class="btn" href="https://github.com/fathomit/fathomit.github.io/tree/main/contact-cleaner">View the source for this project</a></p>
+<p class="note">All data in this sample is fictional.</p>
+</article>
+</main>
+<footer class="foot">
+<div class="wrap">
+<p>All names, companies, addresses and figures in these samples are fictional.</p>
+<p>Fathom IT</p>
+</div>
+</footer>
+<script src="../assets/touches.js" defer></script>
+</body>
+</html>
