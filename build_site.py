@@ -103,13 +103,14 @@ def page(title, description, body, prefix, site):
         repo = f'<a href="{e(site["repo_url"])}">Source code</a>'
     nav_links = "".join(x for x in (repo, contact) if x)
     return f"""<!doctype html>
-<html lang="en-GB">
+<html lang="en-GB" data-skin="glass" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="{prefix}assets/theme-glass.css">
 <link rel="stylesheet" href="{prefix}assets/site.css">
 </head>
 <body>

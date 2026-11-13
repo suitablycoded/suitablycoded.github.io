@@ -1,0 +1,88 @@
+/* Copied from C:\dev-2pps	heme-library	hemes\glass.css (Midnight Glass). Do not edit here:
+   edit the library and copy again. The site is static, so it carries its own copy. */
+/* Midnight Glass — slick. Frosted panels floating over a deep colour wash, thin light type. */
+[data-skin="glass"] {
+  --edge: 1px;
+  --radius: 1.25rem;
+  --pill: 999px;
+  --stripe: 0px;
+  --tilt: 0;
+  --sticker: 0;
+  --fill: 0%;
+  --pill-fill: 18%;
+  --value-tone: 100%;
+  --font-body: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --head-case: none;
+  --head-weight: 300;
+  --head-track: -0.03em;
+  --head-scale: 0.85;
+  --label-case: uppercase;
+  --label-track: 0.14em;
+  --ticker-play: running;
+}
+
+[data-skin="glass"][data-theme="dark"] {
+  --bg: #070b1a;
+  --fg: #eef1ff;
+  --muted: #9aa3c7;
+  --accent: #7cc4ff;
+  --surface: rgba(255, 255, 255, 0.07);
+  --soft: rgba(255, 255, 255, 0.12);
+  --line: rgba(255, 255, 255, 0.2);
+  --ink: #06101f;
+  --c1: #7cc4ff;
+  --c2: #ff8ad1;
+  --c3: #ffd27a;
+  --c4: #7ef0c2;
+  --c5: #b59cff;
+  --good: #7ef0c2;
+  --warn: #ffd27a;
+  --bad: #ff8ad1;
+  --page-bg: radial-gradient(60vmax 60vmax at 8% -10%, #26348a 0%, transparent 60%), radial-gradient(55vmax 55vmax at 105% 105%, #6a1f7a 0%, transparent 60%), radial-gradient(40vmax 40vmax at 70% 20%, #0f5a6e 0%, transparent 60%) #070b1a;
+  --glow-1: transparent;
+  --glow-2: transparent;
+  --nav-bg: rgba(10, 14, 34, 0.55);
+  --nav-fg: #eef1ff;
+  --nav-line: rgba(255, 255, 255, 0.14);
+  --nav-item-line: transparent;
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  --shadow-hover: 0 22px 60px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  --head-fill: linear-gradient(120deg, #ffffff 20%, #7cc4ff 60%, #b59cff);
+  --head-shadow: none;
+  --ticker-bg: rgba(255, 255, 255, 0.05);
+  --ticker-fg: #c9d2f5;
+}
+
+[data-skin="glass"][data-theme="light"] {
+  --bg: #e9eefb;
+  --fg: #101a33;
+  --muted: #55617f;
+  --accent: #1f6fe0;
+  --surface: rgba(255, 255, 255, 0.55);
+  --soft: rgba(16, 26, 51, 0.1);
+  --line: rgba(16, 26, 51, 0.14);
+  --ink: #ffffff;
+  --c1: #1f6fe0;
+  --c2: #c2338f;
+  --c3: #9a5c00;
+  --c4: #0b8566;
+  --c5: #6a3fe0;
+  --good: #0b8566;
+  --warn: #9a5c00;
+  --bad: #c2338f;
+  --page-bg: radial-gradient(60vmax 60vmax at 8% -10%, #bcd0ff 0%, transparent 60%), radial-gradient(55vmax 55vmax at 105% 105%, #f3c6f0 0%, transparent 60%), radial-gradient(40vmax 40vmax at 70% 20%, #bfeee6 0%, transparent 60%) #e9eefb;
+  --glow-1: transparent;
+  --glow-2: transparent;
+  --nav-bg: rgba(255, 255, 255, 0.5);
+  --nav-fg: #101a33;
+  --nav-line: rgba(16, 26, 51, 0.12);
+  --nav-item-line: transparent;
+  --shadow: 0 14px 40px rgba(31, 60, 120, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --shadow-hover: 0 22px 60px rgba(31, 60, 120, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --head-fill: linear-gradient(120deg, #101a33 20%, #1f6fe0 60%, #6a3fe0);
+  --head-shadow: none;
+  --ticker-bg: rgba(255, 255, 255, 0.45);
+  --ticker-fg: #2b3757;
+}
