@@ -38,4 +38,4 @@ python -m http.server 8000
 
 Then open `http://localhost:8000/`.
 
-Maintained by Fathom IT.
+Maintained by Suitably Coded.
