@@ -126,7 +126,7 @@ def page(title, description, body, prefix, site):
 </main>
 <footer class="foot">
 <div class="wrap">
-<p>All names, companies, addresses and figures in these samples are fictional.</p>
+<p>All names, companies, addresses and figures in these sample projects are fictional.</p>
 <p>{e(site["owner_name"])}</p>
 </div>
 </footer>
